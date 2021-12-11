@@ -17,5 +17,9 @@ public class NinjaService {
 	public List<Ninja> allNinjas() {
 		return ninjaRepo.findAll();
 	}
+	
+	public Ninja createNinja(Ninja ninja) {
+		return ninjaRepo.save(ninja);
+	}
 
 }

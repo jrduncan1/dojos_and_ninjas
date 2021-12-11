@@ -1,6 +1,7 @@
 package com.jduncan.dojosandninjas.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +17,22 @@ public class DojoService {
 	
 	public List<Dojo> allDojos() {
 		return dojoRepo.findAll();
+	}
+	
+	public Dojo createDojo(Dojo dojo) {
+		return dojoRepo.save(dojo);
+	}
+	
+	public Dojo showOneDojo(Long id) {
+		
+		Optional<Dojo> dojo = dojoRepo.findById(id);
+		
+		if(dojo.isPresent()) {
+			return dojo.get();
+		} else {
+			return null;
+		}
+		
 	}
 
 }

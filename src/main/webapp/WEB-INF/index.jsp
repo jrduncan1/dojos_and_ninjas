@@ -15,8 +15,8 @@
 	<div class="container m-5">
 		<div class="d-flex justify-content-between align-items-center col-6">
 			<h1>Dojos and Ninjas</h1>
-			<a href="/"><button class="btn btn-warning">Add Dojo</button></a>
-			<a href="/"><button class="btn btn-info">Add Ninja</button></a>
+			<a href="/dojos/new"><button class="btn btn-warning">Add Dojo</button></a>
+			<a href="/ninjas/new"><button class="btn btn-info">Add Ninja</button></a>
 		</div>
 		<div class="mt-5 p-2 border border-3 border-dark col-5">
 			<h3>Dojos: </h3>
@@ -26,7 +26,7 @@
 						<td>${dojos.name}</td>
 						<td>
 							<div class="d-flex">
-								<a href="/dojos/<c:out value="${dojos.id}"></c:out>"><button class="btn btn-secondary me-3">View</button></a>
+								<a href="/dojos/<c:out value="${dojos.id}"></c:out>"><button class="btn btn-sm btn-secondary me-3">View</button></a>
 							</div>
 						</td>
 					</tr>
